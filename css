@@ -1,0 +1,282 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+} 
+body {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    line-height: 1.6; 
+}
+
+/* nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .logo {
+    font-size: 1.8em;
+    color: #e9c46a;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #e76f51;
+} */
+
+/* Hero Section */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #f4a261; /* Background color for the navbar */
+    color: white; /* Text color */
+    padding: 5px 20px; /* Padding for the navbar */
+    position: -webkit-sticky; /* For Safari */
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Position it at the top */
+    z-index: 1000; /* Ensure it stays above other elements */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Center items vertically */
+}
+
+.logo {
+    font-size: 1.5rem; /* Logo font size */
+    font-weight: bold; /* Bold font for logo */
+}
+
+.navbar nav ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox for horizontal layout */
+}
+
+.navbar nav ul li {
+    margin: 0 15px; /* Space between navigation items */
+}
+
+.navbar nav ul li a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 8px 16px; /* Padding for links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar nav ul li a:hover {
+    background-color: #575757; /* Change background on hover */
+}
+
+main {
+    padding: 20px; /* Padding for main content */
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('img/homepage image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: #f4a261;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+/* Menu Section */
+.menu-section {
+    padding: 60px;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    margin-top: -200px;
+    color: #f4a261;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(21, 230, 230, 0.4), rgba(0, 0, 0, 0.8)), url('img/homepage image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #080808;
+    border-radius: 30px;
+}
+
+.menu-item {
+    background-color: rgba(63, 194, 196, 0.1);
+    padding: 20px;
+    border-radius: 95px;
+    box-shadow: 0 10px 20px rgba(233, 13, 167, 0.5);
+    width: 300px;
+    text-align: center;
+    margin-bottom: 40px;
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease-in-out;
+    perspective: 1000px;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-item img:hover {
+    transform: translateZ(20px) rotateY(20deg);
+}
+
+.menu-item h3 {
+    font-size: 1.8em;
+    color: #e9c46a;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.4em;
+    color: #e76f51;
+    margin-bottom: 15px;
+}
+
+.pay-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #2a9d8f;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pay-btn:hover {
+    background-color: #e76f51;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #f4a261;
+}
+
+.contact-info p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 10px;
+    color: #e9c46a;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #2a9d8f;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e76f51;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #f4a261;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+}

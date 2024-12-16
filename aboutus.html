@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Delicious Bites</title>
+    <link rel="stylesheet" href="styles/css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 112, 67, 0.8);
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .about-container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about-container h2 {
+            font-size: 1.8rem;
+            color: #ff5722;
+        }
+
+        .about-container p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #f6f4f4;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .services-slider {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .slide:nth-child(1) {
+            background: #ff8a65;
+        }
+
+        .slide:nth-child(2) {
+            background: #ff7043;
+        }
+
+        .slide:nth-child(3) {
+            background: #d84315;
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .control {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .control:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/homepage\ image.jpg'); background-size: cover; background-attachment: scroll; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+    <header class="navbar">
+        <div class="logo">Delicious Bites Restaurant</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <header>
+        About Us - Delicious Bites
+    </header>
+
+    <div class="about-container">
+        <h2>Welcome to Delicious Bites</h2>
+        <p>
+            At Delicious Bites, we believe in crafting moments filled with flavor. Our journey started with a passion for food and the desire to bring families and friends closer over delicious meals. From mouth-watering appetizers to sumptuous desserts, we serve happiness on every plate.
+        </p>
+        <p>
+            Join us for an unforgettable dining experience where every bite tells a story. Whether you're celebrating a special occasion or simply treating yourself, Delicious Bites is here to make your moments extraordinary.
+        </p>
+    </div>
+
+    <div class="services-slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="img/family burgers.jpg" alt="Gourmet Burgers & Sides">
+                Gourmet Burgers & Sides
+            </div>
+            <div class="slide">
+                <img src="img/Ice-Cream-Sandwich-Dessert_EXPS_FT22_27091_ST_09_07_1.jpg" alt="Exquisite Desserts">
+                Exquisite Desserts
+            </div>
+            <div class="slide">
+                <img src="img/family burgers.jpg" alt="Family Meal Deals">
+                Family Meal Deals
+            </div>
+        </div>
+        <div class="controls">
+            <button class="control" onclick="prevSlide()">&#10094;</button>
+            <button class="control" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+    
+    <script>
+        const slides = document.querySelector('.slides');
+        let index = 0;
+    
+        function showSlide(newIndex) {
+            index = (newIndex + slides.children.length) % slides.children.length;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+    
+        function nextSlide() {
+            showSlide(index + 1);
+        }
+    
+        function prevSlide() {
+            showSlide(index - 1);
+        }
+    
+        setInterval(nextSlide, 3000);
+    </script>
+    <div class="about-container">
+        <h2>Why choose us</h2>
+        <p>
+           <b> Unmatched Flavor and Quality</b>
+            We are passionate about food and committed to using only the freshest, highest-quality ingredients. Every dish we serve is crafted with care, ensuring that every bite bursts with delicious flavors. From our gourmet burgers to our exquisite desserts, every meal is a treat for your taste buds.
+        </p>
+        <p>
+           <b> A Diverse Menu for Every Taste</b>
+            Whether you're craving gourmet burgers, hearty family meal deals, or indulgent desserts, our menu has something for everyone. We offer a variety of dishes, catering to all dietary preferences and providing options that will satisfy your cravings, no matter the occasion.
+        </p>
+        <p><b>Family-Friendly Atmosphere</b>
+            We believe in creating a welcoming environment for everyone. Delicious Bites is a place where families, friends, and colleagues can gather to enjoy great food and make lasting memories. Our restaurant is designed to provide a comfortable and friendly atmosphere that feels just like home.</p>
+    </div>
+    <p>Committed to Sustainability
+        We care about the planet and are committed to sustainable practices. From sourcing locally whenever possible to reducing waste, we take steps to ensure our restaurant operates in an environmentally responsible way. When you dine with us, you can feel good knowing that we’re doing our part to support the environment.
+        
+        Convenient and Fast Service
+        Whether you choose to dine in or take out, we make sure you get your food quickly and served with a smile. We understand that time is valuable, and we work hard to ensure that your meal is ready when you need it, without compromising on quality.
+        
+        </p>
+
+</body>
+</html>
